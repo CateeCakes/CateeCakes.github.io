@@ -1,6 +1,330 @@
 <!DOCTYPE HTML>
 
 <html>
-  <head></head>
-  <body>Coming Soon!</body>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style type="text/css">
+      body {
+        margin: 0;
+        min-width: 1000px;
+        background-color: #ffffee;
+      }
+      
+      .header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: #eeeeff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 0 10px;
+        z-index: 1;
+      }
+      
+      .header-contact {
+        position: absolute;
+        font-family: "Sour Gummy";
+        font-size: 16pt;
+        top: 25px;
+        right: 50px;
+        background-color: #ffffee;
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: black;
+      }
+      
+      .media-icon {
+        position: absolute;
+        height: 35px;
+      }
+      
+      .facebook {
+        position: absolute;
+        left: 50px;
+        top: 25px;
+      }
+      
+      .instagram {
+        position: absolute;
+        left: 100px;
+        top: 25px;
+      }
+      
+      .facebook-footer {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+      }
+      
+      .instagram-footer {
+        position: absolute;
+        right: 100px;
+        bottom: 50px;
+      }
+      
+      .header-contact:hover {
+        background-color: #ffffbb;
+      }
+      
+      .logo {
+        margin-top: 10px;
+        position: absolute;
+        height: 100px;
+      }
+      
+      h1 {
+        margin-top: 110px;
+        font-family: Pacifico;
+        font-size: 32pt;
+      }
+      
+      .abstract {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 1275px;
+      }
+      
+      .abstract-background {
+        position: absolute;
+        width: 100%;
+      }
+      
+      .abstract-content {
+        width: 1000px;
+        display: flex;
+        justify-content: right;
+      }
+      
+      .abstract-card {
+        position: absolute;
+        width: 300px;
+        background-color: #eeeeff88;
+        top: 100px;
+        border-radius: 30px;
+        padding: 10px;
+        animation: card-unhover 0.5s forwards;
+      }
+      
+      .abstract-card:hover {
+        animation: card-hover 0.5s forwards;
+      }
+      
+      .abstract-text {
+        font-family: papyrus;
+        font-size: 14pt;
+      }
+      
+      .content-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 2300px;
+      }
+      
+      .content {
+        width: 1000px;
+        height: 100px;
+      }
+      
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+      
+      h2 {
+        font-size: 48pt;
+        font-family: "Sour Gummy";
+      }
+      
+      .goodie {
+        display: flex;
+        margin-bottom: 20px;
+      }
+      
+      .goodie-flipped {
+        display: flex;
+        transform: scaleX(-1);
+        margin-bottom: 20px;
+      }
+      
+      .goodie-image {
+        object-fit: cover;
+        width: 100%;
+      }
+      
+      .panel {
+        position: relative;
+        width: 40%;
+        height: 500px;
+        background-color: #ffeeee;
+        border-radius: 30px 0 0 30px;
+        padding: 4px 16px 0 16px;
+      }
+      
+      .other-panel {
+        position: relative;
+        width: 60%;
+        height: 500px;
+        background-color: #ffdddd;
+        border-radius: 0 30px 30px 0;
+        overflow: hidden;
+      }
+      
+      .separator {
+        width: 100%;
+        height: 4px;
+        background-color: #ffdddd;
+      }
+      
+      .panel-title {
+        font-size: 32pt;
+        font-family: "Sour Gummy";
+        margin-left: 16px;
+      }
+      
+      .panel-body {
+        font-size: 16pt;
+        font-family: "Sour Gummy";
+      }
+      
+      .panel-title-flipped {
+        font-size: 32pt;
+        font-family: "Sour Gummy";
+        margin-left: 16px;
+        transform: scaleX(-1);
+      }
+      
+      .panel-body-flipped {
+        font-size: 16pt;
+        font-family: "Sour Gummy";
+        transform: scaleX(-1);
+      }
+      
+      .contact {
+        width: 100%;
+        height: 1000px;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .footer {
+        width: 100%;
+        height: 100px;
+        background-color: #ffeeee;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .footer-content {
+        position: relative;
+        width: 1000px;
+        height: 100%;
+      }
+      
+      .copyright {
+        position: absolute;
+        bottom: 10px;
+      }
+      
+      @keyframes test {
+        from{transform:scale(0)}
+        to{transform:scale(1)}
+      }
+      
+      @keyframes card-hover {
+        from{background-color:#eeeeff88}
+        to{background-color:#eeeeffdd}
+      }
+      
+      @keyframes card-unhover {
+        from{background-color:#eeeeffdd}
+        to{background-color:#eeeeff88}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <image class="logo" src="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/359814787_761782975948505_875177361316648875_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=vubrM1v4izQQ7kNvgEBuKtO&_nc_zt=23&_nc_ht=scontent-sea1-1.xx&_nc_gid=AKXRVcGzBc4u1CYxNeywi9d&oh=00_AYAKjYqqZn2tHqTIOPkzW-W31UdUIpEDTY8lilBxVFWSEw&oe=67A75AA1">
+      <h1>Catee Cakes & Cupcakes</h1>
+      <a href="#contact" class="header-contact">Contact Us!</a>
+      <a target="_blank" href="https://www.facebook.com/cateecakes/" class="facebook"><image class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-128.png"></a>
+      <a target="_blank" href="https://www.instagram.com/catee_cakes/?hl=en" class="instagram"><image class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-128.png"></a>
+    </div>
+    <div class="abstract">
+        <image class="abstract-background" src="https://assets-eu-01.kc-usercontent.com/559bb7d3-88a4-01c1-79a3-dd4d5b2d2bb0/74eccdb3-b6ca-4ce4-904b-ec403134b68d/Easy%20Chocolate%20Celebration%20Cake_Landscape%205.jpg">
+        <div class="abstract-content">
+          <div class="abstract-card">
+            <p class="abstract-text">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+          </div>
+        </div>
+    </div>
+    <div class="content-container">
+      <div class="content">
+        <div class="center"><h2>Custom Cakes & Cupcakes</h2></div>
+        <div class="goodie">
+          <div class="panel">
+            <h3 class="panel-title">Cakes!</h3>
+            <div class="separator"></div>
+            <p class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="other-panel">
+            <image class="goodie-image" src="https://curlygirlkitchen.com/wp-content/uploads/2024/01/Rainbow-Cake-High-Altitude-Sprinkles-Lucky-Charms-St-Patricks-Day-007.jpg">
+          </div>
+        </div>
+        <div class="goodie-flipped">
+          <div class="panel">
+            <h3 class="panel-title-flipped">Cupcakes!</h3>
+            <div class="separator"></div>
+            <p class="panel-body-flipped">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="other-panel">
+            <image class="goodie-image" src="https://sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg">
+          </div>
+        </div>
+        <div class="goodie">
+          <div class="panel">
+            <h3 class="panel-title">Macarons!</h3>
+            <div class="separator"></div>
+            <p class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="other-panel">
+            <image class="goodie-image" src="https://www.sweetandsavorybyshinee.com/wp-content/uploads/2024/02/Easy-Macaron-Recipe-4-500x500.jpg">
+          </div>
+        </div>
+        <div class="goodie-flipped">
+          <div class="panel">
+            <h3 class="panel-title-flipped">Cookies!</h3>
+            <div class="separator"></div>
+            <p class="panel-body-flipped">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="other-panel">
+            <image class="goodie-image" src="https://www.verybestbaking.com/sites/g/files/jgfbjl326/files/srh_recipes/d0cdf375f3867232d222a35cbb76e049.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="contact">
+      <h2>Contact Us!</h2>
+      <iframe title="Contact Form" src="https://docs.google.com/forms/d/e/1FAIpQLSeuM_UHVduaXqah7oI8t_2WJWVtvmY2pYomavJx0mvatRXVGQ/viewform?embedded=true" width="1000px" height="700px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+        <p class="copyright">Catee Cakes LLC © 2025</p>
+        <a target="_blank" href="https://www.facebook.com/cateecakes/" class="facebook-footer"><image class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-128.png"></a>
+        <a target="_blank" href="https://www.instagram.com/catee_cakes/?hl=en" class="instagram-footer"><image class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-128.png"></a>
+      </div>
+    </div>
+  </body>
 </html>
