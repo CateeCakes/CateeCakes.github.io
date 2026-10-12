@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    background-image: url("https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display";
+    font-size: 3em;
+    margin: 0;
+}
+h2 {font-size: 2.5em;}
+h3 {font-size: 2em;}
+h4 {font-size: 1.5em;}
+p {
+    font-family: "Raleway";
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(15deg, #eeeeff, #ffffff, #eeeeff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px;
+    z-index: 1;
+}
+
+footer {
+    width: 100%;
+    background-image: linear-gradient(15deg, #eeeeff, #ffffff, #eeeeff);
+    display: flex;
+    align-items: end;
+    box-shadow: 0 0 10px;
+    z-index: 2;
+    justify-content: space-between;
+    padding: 16px;
+    box-sizing: border-box;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        p {
+            margin: 0;
+            text-align: right;
+        }
+    }
+
+    img {
+        height: 8em;
+    }
+}
+
+#logo {
+    display: flex;
+    place-items: end;
+    margin: 16px;
+
+    img {
+        height: 12em;
+        margin: -1.5em;
+    }
+}
+
+#headerButtons {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+
+    div {
+        display: flex;
+        margin-left: 1em;
+        gap: 8px;
+
+        a {
+            margin: 0;
+
+            img {
+                width: 2em;
+            }
+        }
+    }
+
+    a {
+        margin-right: 1em;
+    }
+}
+
+.button {
+    font-family: "Raleway";
+    font-size: 16pt;
+    background-color: #ffffee;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.button:hover {
+    background-color: #ffffbb;
+}
+
+#abstract {
+    position: relative;
+    display: flex;
+    place-items: center;
+
+    img {
+        min-height: 800px;
+        max-width: 100%;
+        flex-grow: 1;
+        object-fit: cover;
+    }
+
+    div {
+        position: absolute;
+        background-color: #eeeeffbb;
+        border-radius: 16px;
+        box-shadow: 0 0 4px black;
+        width: 360px;
+        right: 32px;
+        padding: 16px;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+#content-container {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    background-color: #ffffee;
+    box-shadow: 0 0 20px;
+
+    #goodies {
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.goodie {
+    display: flex;
+}
+
+.goodie-flipped {
+    display: flex;
+    transform: scaleX(-1);
+
+    h3, p {
+        transform: scaleX(-1);
+        text-align: right;
+    }
+ 
+    .goodie-description { text-align: left;}
+}
+
+.goodie-image {
+    object-fit: cover;
+    width: 100%;
+    animation: goodie-unhover 0.5s forwards;
+}
+
+.goodie-image:hover {
+    animation: goodie-hover 0.5s forwards;
+}
+
+.panel {
+    position: relative;
+    width: 45%;
+    height: 400px;
+    background-color: #ffeeee;
+    border-radius: 30px 0 0 30px;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.goodie-description {flex-grow: 1;}
+
+.other-panel {
+    position: relative;
+    width: 55%;
+    height: 400px;
+    background-color: #ffdddd;
+    border-radius: 0 30px 30px 0;
+    overflow: hidden;
+}
+
+.separator {
+    width: 100%;
+    height: 4px;
+    background-color: #ffdddd;
+}
+
+#contact {
+    background-color: #ffffee;
+    box-shadow: 0 0 10px;
+    z-index: -1;
+
+    h1 {
+        text-align: center;
+        
+
+    }
+}
+
+
+
+@keyframes goodie-hover {
+    from{transform: scale(1.0);}
+    to{transform: scale(1.2);}
+}
+
+@keyframes goodie-unhover {
+    from{transform: scale(1.2);}
+    to{transform: scale(1.0);}
+}
+
+
+
+.formContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    background-color: #ffffee;
+    padding: 20px;
+    box-shadow: 0 0 10px;
+    border-radius: 20px;
+}
+
+label {
+    font-family: "Raleway";
+    font-size: 24pt;
+    margin-top: 15px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Raleway";
+    font-size: 16pt;
+    border-radius: 20px;
+    background-color: #ffeeee;
+    border: 2px solid #ffdddd;
+    outline: 2px solid: #ffbbbb;
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.submit {
+    height: 40px;
+    background-color: #eeeeff;
+    border-color: #ddddff;
+}
+
+.submit:hover {
+    background-color: #bbbbff;
+}
