@@ -1,146 +1,158 @@
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="./test.css" rel="stylesheet" />
+    <link href="./tailwind.css" rel="stylesheet" />
 </head>
 
-<header>
-  <div id="logo"><img src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Logo.png" /></div>
-  <div id="headerButtons">
-    <div>
-      <a target="_blank" href="https://www.facebook.com/cateecakes/"><img class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-128.png"></a>
-      <a target="_blank" href="https://www.instagram.com/catee_cakes/?hl=en"><img class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-128.png"></a>
+<header class="py-1 px-1 md:px-32 flex items-start justify-between sticky">
+    <div class="flex items-center">
+        <img class="size-24" src="Logo.png" />
+        <div class="flex flex-col justify-center">
+            <h1 class="leading-7">Catee Cakes</h1>
+            <p class="mr-[-10px] text-right"><i>And Cupcakes!</i></p>
+        </div>
     </div>
-    <a class="button" href="#contact">Contact Us!</a>
-  </div>
+    <div class="flex gap-2 items-end">
+        <a href="#contact"><u>Contact</u></a>
+        <a class="size-6" target="_blank" href="https://www.facebook.com/cateecakes/"><img class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-128.png"></a>
+        <a class="size-6" target="_blank" href="https://www.instagram.com/catee_cakes/?hl=en"><img class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-128.png"></a>
+    </div>
 </header>
 
-<div id="content">
-  <div id="abstract">
-    <img src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Header.jpg" />
-    <div>
-      <p><i>Private Baking Studio who specializes in made-to-order custom cakes, cupcakes, cake pops, macarons, sugar cookies and other treats!</i></p>
+<body>
+    <div class="h-100 w-full object-cover overflow-hidden">
+        <img class="h-100 w-full object-cover transition-all duration-600 ease-in-out hover:scale-125" src="./Header.jpg" />
     </div>
-  </div>
-
-  <div id="content-container">
-    <div id="goodies">
-      <div class="center"><h2>Specialty Products</h2></div>
-      <div class="goodie-flipped">
-        <div class="panel">
-          <h3>Specialty Cakes!</h3>
-          <div class="separator"></div>
-          <p class="goodie-description"></p>
-          <p><b>Price</b></p>
+    <div class="flex flex-col items-center">
+        <div class="bg-accent w-full p-2 flex justify-center">
+            <h4 class="max-w-200 text-center animate-clip-fade"><i>A Private Baking Studio specializing in made-to-order custom cakes, cupcakes, cake pops, macarons, sugar cookies and more!</i></h4>
         </div>
-        <div class="other-panel">
-          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/SpecialtyCake.jpg">
-        </div>
-      </div>
-      <div class="goodie">
-        <div class="panel">
-          <h3>Themed Cakes!</h3>
-          <div class="separator"></div>
-          <p class="goodie-description"></p>
-          <p><b>Price</b></p>
-        </div>
-        <div class="other-panel">
-          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/ThemedCake.jpg">
-        </div>
-      </div>
-      <div class="goodie-flipped">
-        <div class="panel">
-          <h3>Cupcakes!</h3>
-          <div class="separator"></div>
-          <p class="goodie-description"></p>
-          <p><b>Price</b></p>
-        </div>
-        <div class="other-panel">
-          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Cupcakes.jpg">
-        </div>
-      </div>
-      <div class="goodie">
-        <div class="panel">
-          <h3>Macarons!</h3>
-          <div class="separator"></div>
-          <p class="goodie-description"></p>
-          <p><b>Price</b></p>
-        </div>
-        <div class="other-panel">
-          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Macarons.jpg">
-        </div>
-      </div>
-      <div class="goodie-flipped">
-        <div class="panel">
-          <h3>Cookies!</h3>
-          <div class="separator"></div>
-          <p class="goodie-description"></p>
-          <p><b>Price</b></p>
-        </div>
-        <div class="other-panel">
-          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Cookies.jpg">
-        </div>
-      </div>
-      <div class="goodie">
-        <div class="panel">
-          <h3>Cake Pops!</h3>
-          <div class="separator"></div>
-          <p class="goodie-description"></p>
-          <p><b>Price</b></p>
-        </div>
-        <div class="other-panel">
-          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/CakePops.jpg">
-        </div>
-      </div>
     </div>
-  </div>
-
-  <div id="contact">
-    <h1>Contact Us!</h1>
-    <div class="formContainer">
-      <h2 id="submitted">Form Submitted!</h2>
-      <form id="form" class="form">
-        <label for="name">Name</label>
-        <input name="name" id="name" type="text">
-        <label for="email">Email</label>
-        <input name="email" id="email" type="text">
-        <label for="message">Inquiry</label>
-        <textarea form="form" name="message" id="message"></textarea>
-        <label for="date">Date Needed</label>
-        <input type="date" form="form" name="date" id="date">
-        <label for="flexible">Are you flexible to change dates if needed?</label>
-        <div style="display:flex; justify-content:space-around">
-          <div>
-            <label for="yes">Yes</label>
-            <input style="height:20px;width:20px" type="radio" form="form" name="flexible" id="yes" value="Yes">
-          </div>
-          <div>
-            <label for="no">No</label>
-            <input style="height:20px;width:20px" type="radio" form="form" name="flexible" id="no" value = "No" checked=true>
-          </div>
+    <div class="flex flex-col items-center animate-reveal">
+        <h2 class="text-center p-2">Specialty Products</h2>
+        <hr class="max-w-200 w-full p-2" />
+    </div>
+    <div class="flex justify-center">
+        <div class="flex flex-wrap p-2 gap-2 max-w-200">
+            <div class="flex gap-2 bg-card p-2 rounded-sm shadow-sm/20 transition-all duration-300 ease-in-out hover:shadow-lg/40 hover:translate-y-[-12px] grow">
+                <div class="flex flex-col gap-2 grow">
+                    <h4>Specialty Cakes</h4>
+                    <hr />
+                    <p class="grow"><i>Item Description</i></p>
+                    <p><b>$Item Price</b></p>
+                </div>
+                <div class="overflow-hidden">
+                    <img class="h-64" src="SpecialtyCake.jpg" />
+                </div>
+            </div>
+            <div class="flex flex-row-reverse gap-2 bg-card p-2 rounded-sm shadow-sm/20 transition-all duration-300 ease-in-out hover:shadow-lg/40 hover:translate-y-[-12px] grow">
+                <div class="flex flex-col gap-2 grow">
+                    <h4>Themed Cakes</h4>
+                    <hr />
+                    <p class="grow"><i>Item Description</i></p>
+                    <p><b>$Item Price</b></p>
+                </div>
+                <div class="overflow-hidden">
+                    <img class="h-64" src="ThemedCake.jpg" />
+                </div>
+            </div>
+            <div class="flex flex-row-reverse gap-2 bg-card p-2 rounded-sm shadow-sm/20 transition-all duration-300 ease-in-out hover:shadow-lg/40 hover:translate-y-[-12px] grow">
+                <div class="flex flex-col gap-2 grow">
+                    <h4>Cupcakes</h4>
+                    <hr />
+                    <p class="grow"><i>Item Description</i></p>
+                    <p><b>$Item Price</b></p>
+                </div>
+                <div class="overflow-hidden">
+                    <img class="h-64" src="Cupcakes.jpg" />
+                </div>
+            </div>
+            <div class="flex gap-2 bg-card p-2 rounded-sm shadow-sm/20 transition-all duration-300 ease-in-out hover:shadow-lg/40 hover:translate-y-[-12px] grow">
+                <div class="flex flex-col gap-2 grow">
+                    <h4>Macarons</h4>
+                    <hr />
+                    <p class="grow"><i>Item Description</i></p>
+                    <p><b>$Item Price</b></p>
+                </div>
+                <div class="overflow-hidden">
+                    <img class="h-64" src="Macarons.jpg" />
+                </div>
+            </div>
+            <div class="flex gap-2 bg-card p-2 rounded-sm shadow-sm/20 transition-all duration-300 ease-in-out hover:shadow-lg/40 hover:translate-y-[-12px] grow">
+                <div class="flex flex-col gap-2 grow">
+                    <h4>Cookies</h4>
+                    <hr />
+                    <p class="grow"><i>Item Description</i></p>
+                    <p><b>$Item Price</b></p>
+                </div>
+                <div class="overflow-hidden">
+                    <img class="h-64" src="Cookies.jpg" />
+                </div>
+            </div>
+            <div class="flex flex-row-reverse gap-2 bg-card p-2 rounded-sm shadow-sm/20 transition-all duration-300 ease-in-out hover:shadow-lg/40 hover:translate-y-[-12px] grow">
+                <div class="flex flex-col gap-2 grow">
+                    <h4>Cake Pops</h4>
+                    <hr />
+                    <p class="grow"><i>Item Description</i></p>
+                    <p><b>$Item Price</b></p>
+                </div>
+                <div class="overflow-hidden">
+                    <img class="h-64" src="CakePops.jpg" />
+                </div>
+            </div>
         </div>
-        <p id="error" style="color:red;font-family:Sour Gummy">All fields are required!</p>
-        <input class="submit" type="submit" id="formSubmit">
-      </form>
+    </div>
+    <div id="contact" class="bg-accent flex flex-col items-center mt-6">
+        <div class="max-w-200 w-full p-2">
+            <h2 class="text-center p-2">Contact Us</h2>
+            <hr class="p-2" />
+        </div>
+        <h2 class="mb-4" id="submitted">Form Submitted!</h2>
+        <form id="form" class="flex flex-col p-2 max-w-150 w-full gap-2">
+            <div class="flex gap-2">
+                <label class="w-32" for="name">Name</label>
+                <input required maxlength="64" type="text" class="border-1 w-full px-2" name="name" id="name" type="text">
+            </div>
+            <div class="flex gap-2">
+                <label class="w-32" for="email">Email</label>
+                <input required maxlength="255" type="email" class="border-1 w-full px-2" name="email" id="email" type="text">
+            </div>
+            <div class="flex gap-2">
+                <label class="w-32" for="message">Inquiry</label>
+                <textarea rows="4" maxlength="4096" required class="border-1 w-full px-2" name="message" id="message" type="text"></textarea>
+            </div>
+            <div class="flex gap-2">
+                <label class="w-32" for="date">Date Needed</label>
+                <input required type="date" class="border-1 w-full px-2" name="date" id="date" type="text">
+            </div>
+            <div class="flex gap-2">
+                <label class="w-32">Are you flexible to change dates if needed?</label>
+                <div class="flex grow justify-around *:flex *:gap-2 *:items-center">
+                    <div>
+                        <label for="yes">Yes</label>
+                        <input class="size-6 appearance-none bg-white rounded-3xl border-1 shadow-[0_0_2px] checked:border-4 checked:border-white checked:bg-text" type="radio" form="form" name="flexible" id="yes" value="Yes">
+                    </div>
+                    <div>
+                        <label for="no">No</label>
+                        <input class="size-6 appearance-none bg-white rounded-3xl border-1 shadow-[0_0_2px] checked:border-4 checked:border-white checked:bg-text" type="radio" form="form" name="flexible" id="no" value = "No" checked=true>
+                    </div>
+                </div>
+            </div>
+            <Button class="border-1 border-text text-text p-2 hover:bg-text hover:text-white" type="submit" id="formSubmit">Send</Button>
+        </form>
     </div>
 
     <script>
         var theSubmitButton = document.getElementById('formSubmit');
         document.getElementById("submitted").style.display = "none";
-        document.getElementById("error").style.display = "none";
 
         function sendData() {
           data = new FormData(document.querySelector("#form"));
-
-          for (var i of data.keys()) {
-            if (data.get(i) == "") {
-              document.getElementById("error").style.display = "block";
-              return 0;
-            }
-          }
 
           document.getElementById("form").style.display = "none";
           document.getElementById("submitted").style.display = "block";
@@ -157,13 +169,12 @@
           sendData();
         });
     </script>
-  </div>
-</div>
+</body>
 
-<footer>
-  <img class="footer-logo" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Logo.png">
-  <div>
-    <p class="email">cateecakesandcupcakes@gmail.com</p>
-    <p class="copyright">Catee Cakes LLC © 2026</p>
-  </div>
+<footer class="p-2 flex justify-center gap-2 items-end">
+    <img class="size-24" src="Logo.png" />
+    <div class="*:text-[0.8em]">
+        <p>cateecakesandcupcakes@gmail.com</p>
+        <p>Catee Cakes LLC © 2026</p>
+    </div>
 </footer>

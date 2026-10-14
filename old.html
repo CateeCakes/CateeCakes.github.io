@@ -1,0 +1,169 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+  <div id="logo"><img src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Logo.png" /></div>
+  <div id="headerButtons">
+    <div>
+      <a target="_blank" href="https://www.facebook.com/cateecakes/"><img class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-128.png"></a>
+      <a target="_blank" href="https://www.instagram.com/catee_cakes/?hl=en"><img class="media-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-128.png"></a>
+    </div>
+    <a class="button" href="#contact">Contact Us!</a>
+  </div>
+</header>
+
+<div id="content">
+  <div id="abstract">
+    <img src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Header.jpg" />
+    <div>
+      <p><i>Private Baking Studio who specializes in made-to-order custom cakes, cupcakes, cake pops, macarons, sugar cookies and other treats!</i></p>
+    </div>
+  </div>
+
+  <div id="content-container">
+    <div id="goodies">
+      <div class="center"><h2>Specialty Products</h2></div>
+      <div class="goodie-flipped">
+        <div class="panel">
+          <h3>Specialty Cakes!</h3>
+          <div class="separator"></div>
+          <p class="goodie-description"></p>
+          <p><b>Price</b></p>
+        </div>
+        <div class="other-panel">
+          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/SpecialtyCake.jpg">
+        </div>
+      </div>
+      <div class="goodie">
+        <div class="panel">
+          <h3>Themed Cakes!</h3>
+          <div class="separator"></div>
+          <p class="goodie-description"></p>
+          <p><b>Price</b></p>
+        </div>
+        <div class="other-panel">
+          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/ThemedCake.jpg">
+        </div>
+      </div>
+      <div class="goodie-flipped">
+        <div class="panel">
+          <h3>Cupcakes!</h3>
+          <div class="separator"></div>
+          <p class="goodie-description"></p>
+          <p><b>Price</b></p>
+        </div>
+        <div class="other-panel">
+          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Cupcakes.jpg">
+        </div>
+      </div>
+      <div class="goodie">
+        <div class="panel">
+          <h3>Macarons!</h3>
+          <div class="separator"></div>
+          <p class="goodie-description"></p>
+          <p><b>Price</b></p>
+        </div>
+        <div class="other-panel">
+          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Macarons.jpg">
+        </div>
+      </div>
+      <div class="goodie-flipped">
+        <div class="panel">
+          <h3>Cookies!</h3>
+          <div class="separator"></div>
+          <p class="goodie-description"></p>
+          <p><b>Price</b></p>
+        </div>
+        <div class="other-panel">
+          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Cookies.jpg">
+        </div>
+      </div>
+      <div class="goodie">
+        <div class="panel">
+          <h3>Cake Pops!</h3>
+          <div class="separator"></div>
+          <p class="goodie-description"></p>
+          <p><b>Price</b></p>
+        </div>
+        <div class="other-panel">
+          <image class="goodie-image" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/CakePops.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact">
+    <h1>Contact Us!</h1>
+    <div class="formContainer">
+      <h2 id="submitted">Form Submitted!</h2>
+      <form id="form" class="form">
+        <label for="name">Name</label>
+        <input name="name" id="name" type="text">
+        <label for="email">Email</label>
+        <input name="email" id="email" type="text">
+        <label for="message">Inquiry</label>
+        <textarea form="form" name="message" id="message"></textarea>
+        <label for="date">Date Needed</label>
+        <input type="date" form="form" name="date" id="date">
+        <label for="flexible">Are you flexible to change dates if needed?</label>
+        <div style="display:flex; justify-content:space-around">
+          <div>
+            <label for="yes">Yes</label>
+            <input style="height:20px;width:20px" type="radio" form="form" name="flexible" id="yes" value="Yes">
+          </div>
+          <div>
+            <label for="no">No</label>
+            <input style="height:20px;width:20px" type="radio" form="form" name="flexible" id="no" value = "No" checked=true>
+          </div>
+        </div>
+        <p id="error" style="color:red;font-family:Sour Gummy">All fields are required!</p>
+        <input class="submit" type="submit" id="formSubmit">
+      </form>
+    </div>
+
+    <script>
+        var theSubmitButton = document.getElementById('formSubmit');
+        document.getElementById("submitted").style.display = "none";
+        document.getElementById("error").style.display = "none";
+
+        function sendData() {
+          data = new FormData(document.querySelector("#form"));
+
+          for (var i of data.keys()) {
+            if (data.get(i) == "") {
+              document.getElementById("error").style.display = "block";
+              return 0;
+            }
+          }
+
+          document.getElementById("form").style.display = "none";
+          document.getElementById("submitted").style.display = "block";
+
+          // Change this URL to re-implemented Apps Script
+          fetch("https://script.google.com/macros/s/AKfycbzHYqRTaTuufBc375jMx9L3d5jIl3UWlbZqesvmgbzU33__9Vn2mPJByeHxc4eo4KUn/exec", {
+            method: "POST",
+            body: data,
+          });         
+        }
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          sendData();
+        });
+    </script>
+  </div>
+</div>
+
+<footer>
+  <img class="footer-logo" src="https://raw.githubusercontent.com/CateeCakes/CateeCakes.github.io/refs/heads/main/Logo.png">
+  <div>
+    <p class="email">cateecakesandcupcakes@gmail.com</p>
+    <p class="copyright">Catee Cakes LLC © 2026</p>
+  </div>
+</footer>

@@ -20,5 +20,8 @@
   "homepage": "https://github.com/CateeCakes/CateeCakes.github.io#readme",
   "devDependencies": {
     "tailwindcss": "^4.3.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3"
   }
 }
