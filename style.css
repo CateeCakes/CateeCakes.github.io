@@ -13,6 +13,25 @@ h4 {font-size: 1.25rem;}
 
 h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
 
+.card {
+    display: flex;
+    gap: 8px;
+    background-color: var(--color-card);
+    padding: 8px;
+    border-radius: 8px;
+    animation-timeline: view();
+}
+
+.cardReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 8px;
+    background-color: var(--color-card);
+    padding: 8px;
+    border-radius: 8px;
+    animation-timeline: view();
+}
+
 @theme {
     --color-accent: var(--color-teal-200);
     --color-card: var(--color-pink-100);
@@ -20,6 +39,8 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
 
     --animate-clip-fade: clipfade 1s ease-in-out 1;
     --animate-reveal: reveal 1s ease-in-out 1;
+    --animate-card: card 1s ease-in-out 1;
+    --animate-card-reverse: cardReverse 1s ease-in-out 1;
 
 
     @keyframes clipfade {
@@ -41,6 +62,28 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
         to {
             opacity: 1;
             transform: translate(0, 0);
+        }
+    }
+
+    @keyframes card {
+        0% {
+            opacity: 0;
+            transform: translate(-128px, 0) rotate(-45deg);
+        }
+        20% {
+            opacity: 1;
+            transform: translate(0, 0) rotate(0);
+        }
+    }
+
+    @keyframes cardReverse {
+        0% {
+            opacity: 0;
+            transform: translate(128px, 0) rotate(45deg);
+        }
+        20% {
+            opacity: 1;
+            transform: translate(0, 0) rotate(0);
         }
     }
 }

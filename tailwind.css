@@ -13,7 +13,6 @@
     --color-pink-100: oklch(94.8% 0.028 342.258);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --radius-sm: 0.25rem;
     --radius-3xl: 1.5rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
@@ -25,6 +24,8 @@
     --color-text: var(--color-red-400);
     --animate-clip-fade: clipfade 1s ease-in-out 1;
     --animate-reveal: reveal 1s ease-in-out 1;
+    --animate-card: card 1s ease-in-out 1;
+    --animate-card-reverse: cardReverse 1s ease-in-out 1;
   }
 }
 @layer base {
@@ -202,11 +203,11 @@
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
-  .h-100 {
-    height: calc(var(--spacing) * 100);
+  .h-\[80dvh\] {
+    height: 80dvh;
   }
-  .h-150 {
-    height: calc(var(--spacing) * 150);
+  .h-full {
+    height: 100%;
   }
   .w-32 {
     width: calc(var(--spacing) * 32);
@@ -223,6 +224,12 @@
   .grow {
     flex-grow: 1;
   }
+  .animate-card {
+    animation: var(--animate-card);
+  }
+  .animate-card-reverse {
+    animation: var(--animate-card-reverse);
+  }
   .animate-clip-fade {
     animation: var(--animate-clip-fade);
   }
@@ -234,9 +241,6 @@
   }
   .flex-col {
     flex-direction: column;
-  }
-  .flex-row-reverse {
-    flex-direction: row-reverse;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -268,9 +272,6 @@
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
-  .rounded-sm {
-    border-radius: var(--radius-sm);
-  }
   .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -280,9 +281,6 @@
   }
   .bg-accent {
     background-color: var(--color-accent);
-  }
-  .bg-card {
-    background-color: var(--color-card);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -416,6 +414,23 @@ h4 {
 h1, h2, h3, h4, p, label, hr, input, textarea, a {
   color: var(--color-text);
 }
+.card {
+  display: flex;
+  gap: 8px;
+  background-color: var(--color-card);
+  padding: 8px;
+  border-radius: 8px;
+  animation-timeline: view();
+}
+.cardReverse {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  background-color: var(--color-card);
+  padding: 8px;
+  border-radius: 8px;
+  animation-timeline: view();
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -546,6 +561,26 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {
   to {
     opacity: 1;
     transform: translate(0, 0);
+  }
+}
+@keyframes card {
+  0% {
+    opacity: 0;
+    transform: translate(-128px, 0) rotate(-45deg);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0);
+  }
+}
+@keyframes cardReverse {
+  0% {
+    opacity: 0;
+    transform: translate(128px, 0) rotate(45deg);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0);
   }
 }
 @layer properties {
