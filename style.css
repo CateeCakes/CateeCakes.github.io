@@ -32,6 +32,10 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
     animation-timeline: view();
 }
 
+.hero {
+    height: calc(100dvh - 104px);
+}
+
 @theme {
     --color-accent: var(--color-teal-200);
     --color-card: var(--color-pink-100);
@@ -68,7 +72,7 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
     @keyframes card {
         0% {
             opacity: 0;
-            transform: translate(-128px, 0) rotate(-45deg);
+            transform: translate(-128px, 0) rotate(-25deg);
         }
         20% {
             opacity: 1;
@@ -79,7 +83,7 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
     @keyframes cardReverse {
         0% {
             opacity: 0;
-            transform: translate(128px, 0) rotate(45deg);
+            transform: translate(128px, 0) rotate(25deg);
         }
         20% {
             opacity: 1;

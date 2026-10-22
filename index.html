@@ -25,8 +25,11 @@
 </header>
 
 <body>
-    <div class="h-[80dvh] w-full object-cover overflow-hidden">
-        <img class="h-full w-full object-cover transition-all duration-600 ease-in-out hover:scale-125" src="./Header.jpg" />
+    <div class="hero w-full object-cover overflow-hidden relative">
+        <img class="grid place-items-center h-full w-full object-cover transition-all duration-600 ease-in-out hover:scale-125" src="./Header.jpg" />
+        <div class="absolute left-0 top-0 w-full h-full grid place-items-center pointer-events-none">
+            <h2 class="animate-bounce" style="text-shadow: 0 0 8px var(--color-text); color: white;">Let them eat cake!</h2>
+        </div>
     </div>
     <div class="flex flex-col items-center">
         <div class="bg-accent w-full p-2 flex justify-center">

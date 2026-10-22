@@ -11,10 +11,14 @@
     --color-red-400: oklch(70.4% 0.191 22.216);
     --color-teal-200: oklch(91% 0.096 180.426);
     --color-pink-100: oklch(94.8% 0.028 342.258);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --radius-3xl: 1.5rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-bounce: bounce 1s infinite;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -177,8 +181,38 @@
   }
 }
 @layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .static {
+    position: static;
+  }
   .sticky {
     position: sticky;
+  }
+  .top-0 {
+    top: 0px;
+  }
+  .top-\[50\%\] {
+    top: 50%;
+  }
+  .left-0 {
+    left: 0px;
+  }
+  .left-\[50\%\] {
+    left: 50%;
+  }
+  .z-\[100\] {
+    z-index: 100;
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
@@ -192,6 +226,12 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
+  .table {
+    display: table;
+  }
   .size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
@@ -202,9 +242,6 @@
   }
   .h-64 {
     height: calc(var(--spacing) * 64);
-  }
-  .h-\[80dvh\] {
-    height: 80dvh;
   }
   .h-full {
     height: 100%;
@@ -221,8 +258,20 @@
   .max-w-200 {
     max-width: calc(var(--spacing) * 200);
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .animate-bounce {
+    animation: var(--animate-bounce);
   }
   .animate-card {
     animation: var(--animate-card);
@@ -236,6 +285,9 @@
   .animate-reveal {
     animation: var(--animate-reveal);
   }
+  .resize {
+    resize: both;
+  }
   .appearance-none {
     appearance: none;
   }
@@ -244,6 +296,9 @@
   }
   .flex-wrap {
     flex-wrap: wrap;
+  }
+  .place-items-center {
+    place-items: center;
   }
   .items-center {
     align-items: center;
@@ -272,6 +327,10 @@
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -281,6 +340,9 @@
   }
   .bg-accent {
     background-color: var(--color-accent);
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -309,21 +371,51 @@
   .text-right {
     text-align: right;
   }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
   .leading-7 {
     --tw-leading: calc(var(--spacing) * 7);
     line-height: calc(var(--spacing) * 7);
   }
+  .text-\[\#FFFFFF\] {
+    color: #FFFFFF;
+  }
   .text-text {
     color: var(--color-text);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .shadow-sm\/20 {
     --tw-shadow-alpha: 20%;
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 20%)), 0 1px 2px -1px var(--tw-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 20%));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .shadow-xl\/50 {
+    --tw-shadow-alpha: 50%;
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 50%)), 0 8px 10px -6px var(--tw-shadow-color, oklab(from rgb(0 0 0 / 0.1) l a b / 50%));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .shadow-\[0_0_2px\] {
     --tw-shadow: 0 0 2px var(--tw-shadow-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -431,6 +523,29 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {
   border-radius: 8px;
   animation-timeline: view();
 }
+.hero {
+  height: calc(100dvh - 104px);
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -505,6 +620,11 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -543,6 +663,16 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {
   inherits: false;
   initial-value: 1;
 }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
 @keyframes clipfade {
   from {
     opacity: 0;
@@ -566,7 +696,7 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {
 @keyframes card {
   0% {
     opacity: 0;
-    transform: translate(-128px, 0) rotate(-45deg);
+    transform: translate(-128px, 0) rotate(-25deg);
   }
   20% {
     opacity: 1;
@@ -576,7 +706,7 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {
 @keyframes cardReverse {
   0% {
     opacity: 0;
-    transform: translate(128px, 0) rotate(45deg);
+    transform: translate(128px, 0) rotate(25deg);
   }
   20% {
     opacity: 1;
@@ -586,6 +716,11 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-shadow: 0 0 #0000;
@@ -602,6 +737,7 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-translate-x: 0;
