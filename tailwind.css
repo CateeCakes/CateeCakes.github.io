@@ -236,15 +236,29 @@
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
   }
+  .size-8 {
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
+  }
   .size-24 {
     width: calc(var(--spacing) * 24);
     height: calc(var(--spacing) * 24);
+  }
+  .size-42 {
+    width: calc(var(--spacing) * 42);
+    height: calc(var(--spacing) * 42);
+  }
+  .h-42 {
+    height: calc(var(--spacing) * 42);
   }
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
   .h-full {
     height: 100%;
+  }
+  .max-h-64 {
+    max-height: calc(var(--spacing) * 64);
   }
   .w-32 {
     width: calc(var(--spacing) * 32);
