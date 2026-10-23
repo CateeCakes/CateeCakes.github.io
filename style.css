@@ -32,12 +32,12 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
     animation-timeline: view();
 }
 
-.hero {
-    height: calc(100dvh - 104px);
-}
+.hero {height: calc(100dvh - 104px);}
+
+.hero-image {animation: hero-pan 20s ease-in-out infinite alternate;}
 
 @theme {
-    --color-accent: var(--color-teal-200);
+    --color-accent: var(--color-teal-100);
     --color-card: var(--color-pink-100);
     --color-text: var(--color-red-400);
 
@@ -88,6 +88,18 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
         20% {
             opacity: 1;
             transform: translate(0, 0) rotate(0);
+        }
+    }
+
+    @keyframes hero-pan {
+        0% {
+            transform: translate(-10%, -10%) scale(1.2);
+        }
+        50% {
+            transform: translate(0, 10%) scale(1.35);
+        }
+        100% {
+            transform: translate(10%, 0) scale(1.25);
         }
     }
 }
