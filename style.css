@@ -8,8 +8,7 @@ h1, h2, h3 { font-family: 'playfair display';}
 
 h1 {font-size: 2rem;}
 h2 {font-size: 1.75rem;}
-h3 {font-size: 1.5;}
-h4 {font-size: 1.25rem;}
+h3, h4 {font-size: 1.25rem;}
 
 h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
 
@@ -39,7 +38,7 @@ h1, h2, h3, h4, p, label, hr, input, textarea, a {color: var(--color-text);}
 @theme {
     --color-accent: var(--color-teal-100);
     --color-card: var(--color-pink-100);
-    --color-text: var(--color-red-600);
+    --color-text: var(--color-red-500);
 
     --animate-clip-fade: clipfade 1s ease-in-out 1;
     --animate-reveal: reveal 1s ease-in-out 1;
